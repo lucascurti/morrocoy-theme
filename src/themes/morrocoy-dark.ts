@@ -3,7 +3,7 @@
 // Uses MorrocoyTheme class to generate VS Code theme
 // ==========================================================================
 
-import { MorrocoyTheme, MorrocoyThemeConfig } from "../../lib/MorrocoyTheme";
+import { MorrocoyTheme, MorrocoyThemeConfig } from '../../lib/MorrocoyTheme';
 
 /**
  * Morrocoy Dark theme configuration using Tailwind v4 colors.
@@ -12,10 +12,9 @@ import { MorrocoyTheme, MorrocoyThemeConfig } from "../../lib/MorrocoyTheme";
  * and easy customization.
  */
 const config: MorrocoyThemeConfig = {
-  name: "Morrocoy Dark",
-  fileName: "morrocoy-dark.json",
-  type: "dark",
-  semanticHighlighting: true,
+  name: 'Morrocoy Dark',
+  fileName: 'morrocoy-dark.json',
+  type: 'dark',
 
   theme: {
     // =========================================================================
@@ -23,48 +22,33 @@ const config: MorrocoyThemeConfig = {
     // =========================================================================
     interface: {
       // === Text Colors ===
-      foreground: "slate.300",
-      textSecondary: "slate.200",
-      textMuted: "slate.500",
-      textInactive: "slate.400",
+      foreground: 'slate.300',
+      textSecondary: 'slate.200',
+      textMuted: 'slate.500',
+      textInactive: 'slate.400',
 
       // === Backgrounds ===
-      backgroundEditor: "sky.950",
-      backgroundSidebar: "slate.600",
-      backgroundActivityBar: "slate.700",
-      backgroundWidget: "slate.700",
+      backgroundEditor: 'sky.950',
+      backgroundSidebar: 'slate.600',
+      backgroundActivityBar: 'slate.700',
       // Hover highlight
-      backgroundHover: "slate.600",
-
-      // === Borders ===
-      border: "slate.500",
-      // Subtle border
-      borderSubtle: "slate.500",
+      backgroundHover: 'slate.600',
 
       // === Semantic Colors ===
-      accent: "sky.300",
-      error: "red.400",
-      warning: "orange.400",
-      success: "green.500",
-      info: "blue.500",
-      hints: "violet.400",
-      modified: "amber.400",
+      accent: 'sky.300',
+      error: 'red.400',
+      warning: 'orange.400',
+      success: 'green.600',
+      info: 'blue.500',
+      modified: 'amber.500',
 
       // === Cursor & Selection ===
       // Cursor color
-      cursor: "slate.300",
-      selection: "blue.500",
-      findMatchBorder: "amber.400",
+      cursor: 'slate.300',
+      selection: 'blue.500',
 
       // === Bracket Colors ===
-      bracketColors: [
-        "rose.400",
-        "amber.400",
-        "green.400",
-        "blue.400",
-        "violet.400",
-        "cyan.400",
-      ],
+      bracketColors: ['rose.400', 'amber.400', 'green.400', 'blue.400', 'violet.400', 'cyan.400'],
     },
 
     // =========================================================================
@@ -72,61 +56,40 @@ const config: MorrocoyThemeConfig = {
     // =========================================================================
     code: {
       // === Base Text ===
-      foreground: "slate.200",
+      foreground: 'slate.200',
 
       // === Comments ===
-      comment: "slate.500",
-      commentDoc: "slate.400",
+      comment: 'slate.500',
 
       // === Literals ===
-      string: "lime.500",
-      number: "amber.400",
+      string: 'lime.500',
+      number: 'amber.400',
 
       // === Operators & Punctuation ===
-      punctuation: "orange.400",
+      punctuation: 'orange.400',
 
       // === Keywords ===
-      keyword: "purple.300",
-      controlFlow: "rose.400",
-      storage: "rose.200",
-      import: "orange.400",
+      keyword: 'purple.300',
+      controlFlow: 'rose.400',
+      storage: 'rose.200',
+      import: 'orange.400',
 
       // === Types ===
-      type: "amber.200",
-      modifier: "amber.300",
-      primitive: "amber.500",
+      type: 'amber.200',
+      modifier: 'amber.300',
+      primitive: 'amber.200',
 
       // === Functions ===
-      function: "teal.400",
-      parameter: "sky.300",
+      function: 'teal.400',
+      parameter: 'sky.300',
 
       // === Properties ===
-      property: "blue.400",
-      attribute: "purple.300",
+      property: 'blue.400',
+      attribute: 'purple.300',
 
       // === Markup ===
-      tag: "rose.400",
-      tagPunctuation: "teal.400",
-
-      // === Special ===
-      invalid: "rose.500",
-      embedded: "purple.300",
-      link: "purple.300",
+      tag: 'rose.400',
     },
-  },
-
-  // Optional overrides for specific VS Code color keys
-  colorOverrides: {
-    // Use if a specific VS Code key needs a different color than generated
-  },
-
-  // Override semantic token colors to match reference theme
-  semanticTokenColors: {
-    operator: "orange.400",
-    memberOperatorOverload: "orange.400",
-    operatorOverload: "orange.400",
-    interface: "amber.200",
-    type: "amber.200",
   },
 };
 

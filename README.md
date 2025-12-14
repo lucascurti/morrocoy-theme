@@ -5,20 +5,24 @@
 <h1 align="center">Morrocoy Theme</h1>
 
 <p align="center">
-  <strong>🎨 A beautiful VS Code & Cursor theme built with Tailwind CSS colors</strong>
+  <strong>🎨 A VS Code & Cursor theme built with Tailwind CSS colors</strong>
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=your-publisher.morrocoy-theme">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/your-publisher.morrocoy-theme?style=flat-square" alt="Version">
+  <a href="https://marketplace.visualstudio.com/items?itemName=lucas-curti.morrocoy-theme">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/lucas-curti.morrocoy-theme?style=flat-square" alt="Version">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=your-publisher.morrocoy-theme">
-    <img src="https://img.shields.io/visual-studio-marketplace/i/your-publisher.morrocoy-theme?style=flat-square" alt="Installs">
+  <a href="https://marketplace.visualstudio.com/items?itemName=lucas-curti.morrocoy-theme">
+    <img src="https://img.shields.io/visual-studio-marketplace/i/lucas-curti.morrocoy-theme?style=flat-square" alt="Installs">
   </a>
   <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/your-username/morrocoy-theme?style=flat-square" alt="License">
+    <img src="https://img.shields.io/github/license/lucascurti/morrocoy-theme?style=flat-square" alt="License">
   </a>
 </p>
+
+> [!IMPORTANT]
+> This theme is a **work in progress**. Some colors may not look quite right in certain contexts.
+> If you spot any issues, please [open an issue](https://github.com/lucascurti/morrocoy-theme/issues) — they'll be fixed promptly!
 
 ---
 
@@ -41,6 +45,9 @@
   - [How It Works](#how-it-works)
   - [Required Secrets](#required-secrets)
   - [Setting Up Secrets](#setting-up-secrets)
+    - [1. GitHub Token (`GH_TOKEN`)](#1-github-token-gh_token)
+    - [2. VS Code Marketplace Token (`VSCE_TOKEN`)](#2-vs-code-marketplace-token-vsce_token)
+    - [3. Open VSX Token (`OVSX_PAT`) — Optional](#3-open-vsx-token-ovsx_pat--optional)
   - [Triggering a Release](#triggering-a-release)
 - [Contributing](#contributing)
 - [License](#license)
@@ -129,20 +136,20 @@ These control the **VS Code workbench** appearance (editor, sidebar, tabs, etc.)
 | ----------------------- | ----------------------------------- | -------------------------------- |
 | `foreground`            | Primary text color                  | `"slate.200"`                    |
 | `textSecondary`         | Secondary/less prominent text       | `"slate.400"`                    |
-| `textMuted`             | Muted text (placeholders, hints)    | `"slate.500"`                    |
+| `textMuted`             | Muted text, borders, placeholders   | `"slate.500"`                    |
 | `textInactive`          | Inactive elements                   | `"slate.600"`                    |
 | `backgroundEditor`      | Main editor background              | `"slate.900"`                    |
 | `backgroundSidebar`     | Sidebar background                  | `"slate.800"`                    |
-| `backgroundActivityBar` | Activity bar background             | `"slate.850"`                    |
-| `backgroundWidget`      | Dropdowns, inputs, popups           | `"slate.800"`                    |
-| `border`                | Primary borders                     | `"slate.700"`                    |
-| `borderSubtle`          | Subtle borders                      | `"slate.600"`                    |
+| `backgroundActivityBar` | Activity bar, widgets, panels       | `"slate.700"`                    |
+| `backgroundHover`       | Hover highlights                    | `"slate.600"`                    |
 | `accent`                | Accent color (focus, badges, links) | `"sky.400"`                      |
 | `error`                 | Error indicators                    | `"red.400"`                      |
 | `warning`               | Warning indicators                  | `"orange.400"`                   |
 | `success`               | Success indicators                  | `"green.500"`                    |
 | `info`                  | Info indicators                     | `"blue.500"`                     |
+| `modified`              | Modified/changed indicator          | `"amber.400"`                    |
 | `cursor`                | Cursor color                        | `"slate.200"`                    |
+| `selection`             | Selection background                | `"blue.500"`                     |
 | `bracketColors`         | Rainbow bracket colors (array of 6) | `["rose.400", "amber.400", ...]` |
 
 #### Code Colors
@@ -153,7 +160,6 @@ These control **syntax highlighting**:
 | ------------- | ----------------------------------- | -------------- |
 | `foreground`  | Default code text                   | `"slate.200"`  |
 | `comment`     | Comments                            | `"slate.500"`  |
-| `commentDoc`  | Doc comment keywords                | `"slate.400"`  |
 | `string`      | String literals                     | `"lime.500"`   |
 | `number`      | Numeric literals                    | `"amber.400"`  |
 | `punctuation` | Operators, brackets                 | `"orange.400"` |
@@ -162,11 +168,13 @@ These control **syntax highlighting**:
 | `storage`     | Declarations (const, let, function) | `"rose.200"`   |
 | `import`      | Import/export statements            | `"orange.400"` |
 | `type`        | Types, classes, interfaces          | `"amber.200"`  |
+| `modifier`    | Type modifiers (async, as)          | `"amber.300"`  |
+| `primitive`   | Primitive types (string, number)    | `"amber.200"`  |
 | `function`    | Function names                      | `"teal.400"`   |
 | `parameter`   | Function parameters                 | `"sky.300"`    |
 | `property`    | Object properties                   | `"blue.400"`   |
+| `attribute`   | HTML attributes, escape chars       | `"purple.300"` |
 | `tag`         | HTML/XML tags                       | `"rose.400"`   |
-| `attribute`   | HTML attributes                     | `"purple.300"` |
 
 ### Full Example
 
@@ -179,7 +187,6 @@ const config: MorrocoyThemeConfig = {
   name: 'Morrocoy Dark',
   fileName: 'morrocoy-dark.json',
   type: 'dark',
-  semanticHighlighting: true,
 
   theme: {
     interface: {
@@ -193,26 +200,19 @@ const config: MorrocoyThemeConfig = {
       backgroundEditor: 'sky.950',
       backgroundSidebar: 'slate.600',
       backgroundActivityBar: 'slate.700',
-      backgroundWidget: 'slate.700',
       backgroundHover: 'slate.600',
-
-      // Borders
-      border: 'slate.500',
-      borderSubtle: 'slate.500',
 
       // Semantic
       accent: 'sky.300',
       error: 'red.400',
       warning: 'orange.400',
-      success: 'green.500',
+      success: 'green.600',
       info: 'blue.500',
-      hints: 'violet.400',
-      modified: 'amber.400',
+      modified: 'amber.500',
 
       // Cursor & Selection
       cursor: 'slate.300',
       selection: 'blue.500',
-      findMatchBorder: 'amber.400',
 
       // Bracket colors
       bracketColors: ['rose.400', 'amber.400', 'green.400', 'blue.400', 'violet.400', 'cyan.400'],
@@ -221,7 +221,6 @@ const config: MorrocoyThemeConfig = {
     code: {
       foreground: 'slate.200',
       comment: 'slate.500',
-      commentDoc: 'slate.400',
       string: 'lime.500',
       number: 'amber.400',
       punctuation: 'orange.400',
@@ -231,16 +230,12 @@ const config: MorrocoyThemeConfig = {
       import: 'orange.400',
       type: 'amber.200',
       modifier: 'amber.300',
-      primitive: 'amber.500',
+      primitive: 'amber.200',
       function: 'teal.400',
       parameter: 'sky.300',
       property: 'blue.400',
       attribute: 'purple.300',
       tag: 'rose.400',
-      tagPunctuation: 'teal.400',
-      invalid: 'rose.500',
-      embedded: 'purple.300',
-      link: 'purple.300',
     },
   },
 };
