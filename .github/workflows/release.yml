@@ -24,8 +24,10 @@ jobs:
       - name: Prepare repository
         run: git fetch --unshallow --tags
 
-      - name: Install libsecret (required by vsce)
-        run: sudo apt-get install -y libsecret-1-dev
+      - name: Install libsecret and dbus (required by vsce)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libsecret-1-dev dbus-x11 gnome-keyring
 
       - name: Use Node.js 20.18.1
         uses: actions/setup-node@v4
@@ -40,7 +42,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
-        run: npm run release
+        run: dbus-run-session -- npm run release
 
       - name: Publish to Open VSX Registry
         env:
