@@ -3,7 +3,7 @@
   "displayName": "Morrocoy Theme",
   "description": "Morrocoy Theme based on Tailwind colors",
   "publisher": "lucas-curti",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "engines": {
     "vscode": "^1.90.0",
     "node": ">=20.18.1 <24.0.0"
