@@ -41,7 +41,7 @@ jobs:
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
+          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
         run: dbus-run-session -- npm run release
 
       - name: Publish to Open VSX Registry
