@@ -1,0 +1,77 @@
+{
+  "name": "morrocoy-theme",
+  "displayName": "Morrocoy Theme",
+  "description": "Morrocoy Theme based on Tailwind colors",
+  "publisher": "lucas-curti",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.90.0",
+    "node": ">=20.18.1 <21.0.0"
+  },
+  "packageManager": "pnpm@9.14.4",
+  "icon": "img/icon.png",
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Morrocoy Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/morrocoy-dark.json"
+      }
+    ]
+  },
+  "repository": "lucascurti/morrocy-theme",
+  "author": "Lucas Curti <lucas.curti@gmail.com>",
+  "scripts": {
+    "release": "auto shipit",
+    "package": "vsce package",
+    "publish:ovsx": "dotenv -- ovsx publish",
+    "publish:vscode": "dotenv -- vsce publish",
+    "test:ovsx": "echo 'Add OVSX_PAT=your_token to .env file'",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --cache --quiet",
+    "lint:fix": "eslint . --fix --cache --quiet",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check",
+    "check:fix": "pnpm typecheck && pnpm lint:fix && pnpm format",
+    "generate:colors": "tsx lib/MorrocoyTheme/resources/generateTailwindColors.ts",
+    "generate:vscode-types": "tsx lib/MorrocoyTheme/resources/generateVSCodeColorTypes.ts",
+    "generate:scope-types": "tsx lib/MorrocoyTheme/resources/generateTextMateScopeTypes.ts",
+    "generate:semantic-types": "tsx lib/MorrocoyTheme/resources/generateSemanticTokenTypes.ts",
+    "generate": "run-s generate:*",
+    "build:themes": "tsx tools/buildThemes.ts",
+    "build:themes:watch": "tsx --watch tools/buildThemes.ts"
+  },
+  "devDependencies": {
+    "@auto-it/all-contributors": "11.3.0",
+    "@auto-it/first-time-contributor": "11.3.0",
+    "@auto-it/git-tag": "11.3.0",
+    "@auto-it/pr-body-labels": "11.3.0",
+    "@auto-it/released": "11.3.0",
+    "@auto-it/vscode": "11.3.0",
+    "@eslint/eslintrc": "3.3.3",
+    "@types/culori": "^4.0.1",
+    "@types/node": "^24.10.2",
+    "@typescript-eslint/eslint-plugin": "8.49.0",
+    "@typescript-eslint/parser": "8.49.0",
+    "@vscode/vsce": "^3.2.1",
+    "auto": "11.3.0",
+    "culori": "^4.0.2",
+    "dotenv-cli": "^7.4.2",
+    "eslint": "9.39.2",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-import": "2.32.0",
+    "globals": "^16.2.0",
+    "npm-run-all2": "^8.0.4",
+    "ovsx": "^0.9.5",
+    "prettier": "3.7.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
+  }
+}

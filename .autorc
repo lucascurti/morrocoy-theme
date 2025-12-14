@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "all-contributors",
+    "first-time-contributor",
+    "released",
+    [
+      "pr-body-labels"
+    ],
+    "vscode"
+  ]
+}
