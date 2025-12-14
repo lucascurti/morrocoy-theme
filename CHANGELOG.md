@@ -1,3 +1,15 @@
+# v0.0.14 (Sun Dec 14 2025)
+
+#### 🐛 Bug Fix
+
+- Update Node.js to v24 [#7](https://github.com/lucascurti/morrocoy-theme/pull/7) ([@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 1
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+
+---
+
 # v0.0.13 (Sun Dec 14 2025)
 
 #### 🐛 Bug Fix
