@@ -1,3 +1,15 @@
+# v0.0.13 (Sun Dec 14 2025)
+
+#### 🐛 Bug Fix
+
+- Configure Renovate [#2](https://github.com/lucascurti/morrocoy-theme/pull/2) ([@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 1
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+
+---
+
 # v0.0.8 (Sun Dec 14 2025)
 
 #### ⚠️ Pushed to `main`
