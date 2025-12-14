@@ -1,3 +1,15 @@
+# v0.0.15 (Sun Dec 14 2025)
+
+#### 🐛 Bug Fix
+
+- Update actions/setup-node action to v6 [#6](https://github.com/lucascurti/morrocoy-theme/pull/6) ([@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 1
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+
+---
+
 # v0.0.14 (Sun Dec 14 2025)
 
 #### 🐛 Bug Fix
