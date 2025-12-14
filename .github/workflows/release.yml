@@ -23,9 +23,11 @@ jobs:
 
       - name: Prepare repository
         run: git fetch --unshallow --tags
+
       - uses: pnpm/action-setup@v3
         with:
           version: 9.14.4
+
       - name: Use Node.js 20.18.1
         uses: actions/setup-node@v4
         with:
@@ -40,14 +42,24 @@ jobs:
           restore-keys: |
             npm-deps-${{ hashFiles('pnpm-lock.yaml') }}
 
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: pnpm run release
+
+      - name: Publish to VS Code Marketplace
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: |
-          sudo apt-get install libsecret-1-dev
-          sudo apt-get install gnome-keyring
-          pnpm install
-          pnpm run release
+          if [ -n "$VSCE_PAT" ]; then
+            echo "Publishing to VS Code Marketplace..."
+            pnpm vsce publish --no-dependencies -p "$VSCE_PAT"
+          else
+            echo "VSCE_PAT not set, skipping VS Code Marketplace publish"
+          fi
 
       - name: Publish to Open VSX Registry
         env:
@@ -55,7 +67,7 @@ jobs:
         run: |
           if [ -n "$OVSX_PAT" ]; then
             echo "Publishing to Open VSX Registry..."
-            pnpm run publish:ovsx
+            pnpm ovsx publish --no-dependencies -p "$OVSX_PAT"
           else
             echo "OVSX_PAT not set, skipping Open VSX Registry publish"
           fi

@@ -313,7 +313,7 @@ Set these secrets in your GitHub repository (**Settings → Secrets and variable
 | Secret     | Required    | Description                                                                                                    |
 | ---------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
 | `GH_TOKEN` | ✅ Yes      | GitHub Personal Access Token with `repo` scope. Used by `auto` to create releases, tags, and update changelog. |
-| `VSCE_PAT` | ✅ Yes      | VS Code Marketplace Personal Access Token. Used by the `@auto-it/vscode` plugin to publish to the marketplace. |
+| `VSCE_PAT` | ✅ Yes      | VS Code Marketplace Personal Access Token. Used to publish to the marketplace.                                 |
 | `OVSX_PAT` | ❌ Optional | Open VSX Personal Access Token. If not set, Open VSX publishing is skipped.                                    |
 
 ### Setting Up Secrets
