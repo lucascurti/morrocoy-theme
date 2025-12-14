@@ -6,7 +6,7 @@
   "version": "0.0.2",
   "engines": {
     "vscode": "^1.90.0",
-    "node": ">=20.18.1 <21.0.0"
+    "node": ">=20.18.1 <24.0.0"
   },
   "packageManager": "pnpm@9.14.4",
   "icon": "img/icon.png",

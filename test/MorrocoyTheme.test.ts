@@ -21,20 +21,15 @@ function createMinimalInterfaceTheme(): SemanticInterfaceTheme {
     backgroundEditor: 'stone.50',
     backgroundSidebar: 'stone.100',
     backgroundActivityBar: 'stone.200',
-    backgroundWidget: 'stone.50',
     backgroundHover: 'stone.800',
-    border: 'stone.300',
-    borderSubtle: 'stone.200',
     accent: 'pink.600',
     error: 'pink.600',
     warning: 'orange.600',
     success: 'teal.700',
     info: 'blue.700',
-    hints: 'violet.700',
     modified: 'amber.700',
     cursor: 'stone.800',
     selection: 'stone.500',
-    findMatchBorder: 'amber.700',
   };
 }
 
@@ -45,7 +40,6 @@ function createMinimalCodeTheme(): SemanticCodeTheme {
   return {
     foreground: 'stone.200',
     comment: 'stone.500',
-    commentDoc: 'stone.400',
     string: 'teal.400',
     number: 'amber.400',
     punctuation: 'orange.400',
@@ -61,10 +55,6 @@ function createMinimalCodeTheme(): SemanticCodeTheme {
     property: 'blue.400',
     attribute: 'pink.400',
     tag: 'rose.400',
-    tagPunctuation: 'teal.500',
-    invalid: 'pink.600',
-    embedded: 'pink.500',
-    link: 'pink.500',
   };
 }
 
@@ -133,7 +123,6 @@ describe('MorrocoyTheme', () => {
   describe('toJSON', () => {
     it('should generate valid VS Code theme JSON structure', () => {
       const theme = createTheme(undefined, undefined, {
-        semanticHighlighting: true,
         semanticTokenColors: {
           operator: 'orange.400',
           interface: 'amber.200',
@@ -191,8 +180,8 @@ describe('MorrocoyTheme', () => {
       const theme = createTheme();
       const json = theme.toJSON();
 
-      // Generated from code theme
-      expect(json.semanticTokenColors.operator).toBe(tailwindColors['orange.400']); // punctuation
+      // Generated from code theme (operator uses import color)
+      expect(json.semanticTokenColors.operator).toBe(tailwindColors['orange.500']); // import
       expect(json.semanticTokenColors.type).toBe(tailwindColors['blue.500']);
       expect(json.semanticTokenColors.interface).toBe(tailwindColors['blue.500']);
     });

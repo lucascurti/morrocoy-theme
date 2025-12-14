@@ -39,19 +39,8 @@ export interface SemanticInterfaceTheme {
   /** Activity bar and tertiary backgrounds */
   backgroundActivityBar: TailwindColor;
 
-  /** Widget backgrounds (dropdowns, inputs, notifications) */
-  backgroundWidget: TailwindColor;
-
   /** Hover and subtle highlight backgrounds (computed with transparency) */
   backgroundHover: TailwindColor;
-
-  // === Border Colors ===
-
-  /** Primary border color */
-  border: TailwindColor;
-
-  /** Subtle/light border for less prominent separators */
-  borderSubtle: TailwindColor;
 
   // === Accent & Semantic Colors ===
 
@@ -70,9 +59,6 @@ export interface SemanticInterfaceTheme {
   /** Info color (information messages, debug info) */
   info: TailwindColor;
 
-  /** Hints color (hints, suggestions) */
-  hints: TailwindColor;
-
   /** Modified/changed indicator color (git modified) */
   modified: TailwindColor;
 
@@ -83,9 +69,6 @@ export interface SemanticInterfaceTheme {
 
   /** Selection background base (transparency applied internally) */
   selection: TailwindColor;
-
-  /** Find match highlight border */
-  findMatchBorder: TailwindColor;
 
   // === Bracket Colors (for rainbow brackets) ===
 
@@ -118,9 +101,6 @@ export interface SemanticCodeTheme {
 
   /** Regular comments */
   comment: TailwindColor;
-
-  /** Doc comment keywords (@param, @returns, etc.) */
-  commentDoc: TailwindColor;
 
   // === Literals ===
 
@@ -180,20 +160,6 @@ export interface SemanticCodeTheme {
 
   /** HTML/XML tag names */
   tag: TailwindColor;
-
-  /** Tag punctuation (< > </ />) */
-  tagPunctuation: TailwindColor;
-
-  // === Special ===
-
-  /** Invalid/illegal code */
-  invalid: TailwindColor;
-
-  /** Interpolation, embedded expressions */
-  embedded: TailwindColor;
-
-  /** Link URLs */
-  link: TailwindColor;
 }
 
 // ==========================================================================
