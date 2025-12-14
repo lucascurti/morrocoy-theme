@@ -9,14 +9,14 @@
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=your-publisher.morrocoy-theme">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/your-publisher.morrocoy-theme?style=flat-square" alt="Version">
+  <a href="https://marketplace.visualstudio.com/items?itemName=lucas-curti.morrocoy-theme">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/lucas-curti.morrocoy-theme?style=flat-square" alt="Version">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=your-publisher.morrocoy-theme">
-    <img src="https://img.shields.io/visual-studio-marketplace/i/your-publisher.morrocoy-theme?style=flat-square" alt="Installs">
+  <a href="https://marketplace.visualstudio.com/items?itemName=lucas-curti.morrocoy-theme">
+    <img src="https://img.shields.io/visual-studio-marketplace/i/lucas-curti.morrocoy-theme?style=flat-square" alt="Installs">
   </a>
   <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/your-username/morrocoy-theme?style=flat-square" alt="License">
+    <img src="https://img.shields.io/github/license/lucascurti/morrocoy-theme?style=flat-square" alt="License">
   </a>
 </p>
 
