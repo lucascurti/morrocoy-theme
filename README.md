@@ -20,6 +20,10 @@
   </a>
 </p>
 
+> [!IMPORTANT]
+> This theme is a **work in progress**. Some colors may not look quite right in certain contexts.
+> If you spot any issues, please [open an issue](https://github.com/lucascurti/morrocoy-theme/issues) — they'll be fixed promptly!
+
 ---
 
 ## Table of Contents
