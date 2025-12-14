@@ -24,6 +24,9 @@
   },
   "repository": "lucascurti/morrocy-theme",
   "author": "Lucas Curti <lucas.curti@gmail.com>",
+  "vsce": {
+    "dependencies": false
+  },
   "scripts": {
     "release": "auto shipit",
     "package": "vsce package",
