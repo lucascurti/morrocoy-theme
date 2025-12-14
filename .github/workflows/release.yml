@@ -24,6 +24,9 @@ jobs:
       - name: Prepare repository
         run: git fetch --unshallow --tags
 
+      - name: Install libsecret (required by vsce)
+        run: sudo apt-get install -y libsecret-1-dev
+
       - name: Use Node.js 20.18.1
         uses: actions/setup-node@v4
         with:
