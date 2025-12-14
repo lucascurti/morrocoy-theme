@@ -14,13 +14,13 @@ importers:
       '@auto-it/first-time-contributor':
         specifier: 11.3.6
         version: 11.3.6(@types/node@25.0.2)(typescript@5.9.3)
-      '@auto-it/git-tag':
-        specifier: 11.3.6
-        version: 11.3.6(@types/node@25.0.2)(typescript@5.9.3)
       '@auto-it/pr-body-labels':
         specifier: 11.3.6
         version: 11.3.6(@types/node@25.0.2)(typescript@5.9.3)
       '@auto-it/released':
+        specifier: 11.3.6
+        version: 11.3.6(@types/node@25.0.2)(typescript@5.9.3)
+      '@auto-it/vscode':
         specifier: 11.3.6
         version: 11.3.6(@types/node@25.0.2)(typescript@5.9.3)
       '@eslint/eslintrc':
@@ -102,9 +102,6 @@ packages:
   '@auto-it/first-time-contributor@11.3.6':
     resolution: {integrity: sha512-okT0uyc1wOOq0Olnck8oDoKqlBkzt31PsFUdfiYzRMZMEd0p6bRB45I3GAkZHjtnqOdC7EtfqTcSG+7NPV0AoQ==}
 
-  '@auto-it/git-tag@11.3.6':
-    resolution: {integrity: sha512-0oMHnSJe94EQDzwWgtuYKCclfzNGtViDqfGizoxj0r24kLb6gk6C22Ww7nuxzCRtVuIiYnOY5CBZGJXtsvGtsw==}
-
   '@auto-it/npm@11.3.6':
     resolution: {integrity: sha512-yKYvlBcIRIOlFLJFpAq2ipdGihqyxAf5KZ9YeDxF/xN54XUV5A5kQqohSpAckxpWKBwxPIKODdLyY5Y0Tm0qfQ==}
 
@@ -120,6 +117,9 @@ packages:
 
   '@auto-it/version-file@11.3.6':
     resolution: {integrity: sha512-dtf2T02ryIdX1GWQ9jeLW7EQj1IOBNFQX4BGS2uAddjszsd65hYNoRFMzQ+T/tr7j5Fn9RDaxXLamwYfaSPn9Q==}
+
+  '@auto-it/vscode@11.3.6':
+    resolution: {integrity: sha512-eVX0mMmbzfyvbl87i5ZnFYZzV320ZDCA3zh9T/uiVLEK8gcjo65xni8wvQ6mLFTD1J6gm93/nDGdOPihw1KW8Q==}
 
   '@azu/format-text@1.0.2':
     resolution: {integrity: sha512-Swi4N7Edy1Eqq82GxgEECXSSLyn6GOb5htRFPzBDdUkECGXtlf12ynO5oJSpWKPwCaUssOu7NfhDcCWpIC6Ywg==}
@@ -1270,6 +1270,9 @@ packages:
     resolution: {integrity: sha512-zJAaP9zxTcvTHRlejau3ZOY4V7SRpiByf3/dxx2uyKxxor19tpmpV2QRsTKikckwhaPmr2dVpxxMr7jOCYVp5g==}
     engines: {node: '>=6.0.0'}
 
+  azure-devops-node-api@11.2.0:
+    resolution: {integrity: sha512-XdiGPhrpaT5J8wdERRKs5g8E0Zy1pvOYTli7z9E8nmOn3YGp4FhtjhrOyFmX/8veWCwdI69mCHKJw6l+4J/bHA==}
+
   azure-devops-node-api@12.5.0:
     resolution: {integrity: sha512-R5eFskGvOm3U/GzeAuxRkUsAl0hrAwGgWn6zAd2KrZmrEhWZVqLew4OOupbQlXUuojUzpGtq62SmdhJ06N88og==}
 
@@ -1535,6 +1538,9 @@ packages:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
 
+  denodeify@1.2.1:
+    resolution: {integrity: sha512-KNTihKNmQENUZeKu5fzfpzRqR5S2VMp4gl9RFHiWzj9DfvYQPMJ6XHKNaQxaGCXwPk6y9yme3aUoaiAe+KX+vg==}
+
   deprecation@2.3.1:
     resolution: {integrity: sha512-xmHIy4F3scKVwMsQ4WnVaS8bHOx0DmVwRywosKhaILI0ywMDWPtBSku2HNxRvF7jtwDRsoEwYQSfbxj8b7RlJQ==}
 
@@ -1622,6 +1628,9 @@ packages:
   enquirer@2.4.1:
     resolution: {integrity: sha512-rRqJg/6gd538VHvR3PSrdRBb/1Vy2YfzHqzvbhGIQpDRKIa4FgV/54b5Q1xYSxOOwKvjXweS26E0Q+nAMwp2pQ==}
     engines: {node: '>=8.6'}
+
+  entities@2.0.3:
+    resolution: {integrity: sha512-MyoZ0jgnLvB2X3Lg5HqpFmn1kybDiIfEQmKzTb5apr51Rb+T3KdmMiqa70T+bhGnyv7bQ6WMj2QMHpGMmlrUYQ==}
 
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
@@ -2382,6 +2391,9 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
+  linkify-it@2.2.0:
+    resolution: {integrity: sha512-GnAl/knGn+i1U/wjBz3akz2stz+HrHLsxMwHQGofCDfPvlf+gDKN58UtfmUquTY4/MXeE2x7k19KQmeoZi94Iw==}
+
   linkify-it@5.0.0:
     resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
 
@@ -2462,6 +2474,10 @@ packages:
   make-error@1.3.6:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
 
+  markdown-it@10.0.0:
+    resolution: {integrity: sha512-YWOP1j7UbDNz+TumYP1kpwnP0aEa711cJjrAQrzd0UXlbJfc5aAq0F/PZHjiioqDC1NKgvIMX+o+9Bk7yuM2dg==}
+    hasBin: true
+
   markdown-it@14.1.0:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
     hasBin: true
@@ -2469,6 +2485,9 @@ packages:
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
+
+  mdurl@1.0.1:
+    resolution: {integrity: sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==}
 
   mdurl@2.0.0:
     resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
@@ -2656,6 +2675,10 @@ packages:
   os-tmpdir@1.0.2:
     resolution: {integrity: sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==}
     engines: {node: '>=0.10.0'}
+
+  osenv@0.1.5:
+    resolution: {integrity: sha512-0CWcCECdMVc2Rw3U5w9ZjqX6ga6ubk1xDVKxtBQPK7wis/0F2r9T6k4ydGYhecl7YUBxBVxhL5oisPsNxAPe2g==}
+    deprecated: This package is no longer supported.
 
   ovsx@0.10.7:
     resolution: {integrity: sha512-UjBQlB5xSDD+biAylCZ8Q/k3An9K3y9FYa+hT/HTbJkzOQP+gaNHX20CaOo4lrYT1iJXdiePH9zS2uvCXdDNDA==}
@@ -3370,6 +3393,9 @@ packages:
     resolution: {integrity: sha512-dvdQgNDNJo+8B2uBQoqdb11eUCE1JQXhvjC/CZtgvZseVd5TYMXnq0+vuUemXbd/Se29cTaUuPX3YIc2xgbvIg==}
     engines: {node: '>=8'}
 
+  uc.micro@1.0.6:
+    resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
+
   uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
 
@@ -3404,6 +3430,9 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  url-join@1.1.0:
+    resolution: {integrity: sha512-zz1wZk4Lb5PTVwZ3HWDmm8XnlPvmOof6/fjdDPA5yBrUcbtV64U6bV832Zf1BtU2WkBBWaUT46wCs+l0HP5nhg==}
 
   url-join@4.0.1:
     resolution: {integrity: sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==}
@@ -3503,6 +3532,12 @@ packages:
       jsdom:
         optional: true
 
+  vsce@1.103.1:
+    resolution: {integrity: sha512-98oKQKKRp7J/vTIk1cuzom5cezZpYpRHs3WlySdsrTCrAEipB/HvaPTc4VZ3hGZHzHXS9P5p2L0IllntJeXwiQ==}
+    engines: {node: '>= 10'}
+    deprecated: vsce has been renamed to @vscode/vsce. Install using @vscode/vsce instead.
+    hasBin: true
+
   webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
 
@@ -3581,6 +3616,10 @@ packages:
   wsl-utils@0.1.0:
     resolution: {integrity: sha512-h3Fbisa2nKGPxCpm89Hk33lBLsnaGBvctQopaBSOW/uIs6FTe1ATyAnKFJrzVs9vpGdsTe73WF3V4lIsk4Gacw==}
     engines: {node: '>=18'}
+
+  xml2js@0.4.23:
+    resolution: {integrity: sha512-ySPiMjM0+pLDftHgXY4By0uswI3SPKLDw/i3UXbnO8M/p28zqexCUoPmQFrYD+/1BzhGJSs2i1ERWKJAtiLrug==}
+    engines: {node: '>=4.0.0'}
 
   xml2js@0.5.0:
     resolution: {integrity: sha512-drPFnkQJik/O+uPKpqSgr22mpuFHqKdbS835iAQrUC73L2F5WkboIRd63ai/2Yg6I1jzifPFKH2NTK+cfglkIA==}
@@ -3719,19 +3758,6 @@ snapshots:
       - supports-color
       - typescript
 
-  '@auto-it/git-tag@11.3.6(@types/node@25.0.2)(typescript@5.9.3)':
-    dependencies:
-      '@auto-it/core': 11.3.6(@types/node@25.0.2)(typescript@5.9.3)
-      semver: 7.6.3
-      tslib: 2.1.0
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-      - '@types/node'
-      - encoding
-      - supports-color
-      - typescript
-
   '@auto-it/npm@11.3.6(@types/node@25.0.2)(typescript@5.9.3)':
     dependencies:
       '@auto-it/core': 11.3.6(@types/node@25.0.2)(typescript@5.9.3)
@@ -3798,6 +3824,23 @@ snapshots:
       io-ts: 2.2.22(fp-ts@2.16.9)
       semver: 7.6.3
       tslib: 1.10.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - supports-color
+      - typescript
+
+  '@auto-it/vscode@11.3.6(@types/node@25.0.2)(typescript@5.9.3)':
+    dependencies:
+      '@auto-it/core': 11.3.6(@types/node@25.0.2)(typescript@5.9.3)
+      '@auto-it/package-json-utils': 11.3.6
+      fp-ts: 2.16.9
+      io-ts: 2.2.22(fp-ts@2.16.9)
+      semver: 7.6.3
+      tslib: 2.1.0
+      vsce: 1.103.1
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -4959,6 +5002,11 @@ snapshots:
 
   await-to-js@3.0.0: {}
 
+  azure-devops-node-api@11.2.0:
+    dependencies:
+      tunnel: 0.0.6
+      typed-rest-client: 1.8.11
+
   azure-devops-node-api@12.5.0:
     dependencies:
       tunnel: 0.0.6
@@ -4966,8 +5014,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  base64-js@1.5.1:
-    optional: true
+  base64-js@1.5.1: {}
 
   before-after-hook@2.2.3: {}
 
@@ -4980,7 +5027,6 @@ snapshots:
       buffer: 5.7.1
       inherits: 2.0.4
       readable-stream: 3.6.2
-    optional: true
 
   boolbase@1.0.0: {}
 
@@ -5011,7 +5057,6 @@ snapshots:
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
-    optional: true
 
   bundle-name@4.1.0:
     dependencies:
@@ -5088,8 +5133,7 @@ snapshots:
       undici: 6.21.1
       whatwg-mimetype: 4.0.0
 
-  chownr@1.1.4:
-    optional: true
+  chownr@1.1.4: {}
 
   ci-info@2.0.0: {}
 
@@ -5213,7 +5257,6 @@ snapshots:
   decompress-response@6.0.0:
     dependencies:
       mimic-response: 3.1.0
-    optional: true
 
   dedent@0.7.0: {}
 
@@ -5246,10 +5289,11 @@ snapshots:
 
   delayed-stream@1.0.0: {}
 
+  denodeify@1.2.1: {}
+
   deprecation@2.3.1: {}
 
-  detect-libc@2.0.3:
-    optional: true
+  detect-libc@2.0.3: {}
 
   didyoumean@1.2.2: {}
 
@@ -5326,7 +5370,6 @@ snapshots:
   end-of-stream@1.4.4:
     dependencies:
       once: 1.4.0
-    optional: true
 
   endent@2.1.0:
     dependencies:
@@ -5338,6 +5381,8 @@ snapshots:
     dependencies:
       ansi-colors: 4.1.3
       strip-ansi: 6.0.1
+
+  entities@2.0.3: {}
 
   entities@4.5.0: {}
 
@@ -5692,8 +5737,7 @@ snapshots:
       signal-exit: 3.0.7
       strip-final-newline: 2.0.0
 
-  expand-template@2.0.3:
-    optional: true
+  expand-template@2.0.3: {}
 
   expect-type@1.3.0: {}
 
@@ -5801,8 +5845,7 @@ snapshots:
 
   fromentries@1.3.2: {}
 
-  fs-constants@1.0.0:
-    optional: true
+  fs-constants@1.0.0: {}
 
   fs-extra@11.3.2:
     dependencies:
@@ -5878,8 +5921,7 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
-  github-from-package@0.0.0:
-    optional: true
+  github-from-package@0.0.0: {}
 
   gitlog@4.0.8:
     dependencies:
@@ -6015,8 +6057,7 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  ieee754@1.2.1:
-    optional: true
+  ieee754@1.2.1: {}
 
   ignore@3.3.10: {}
 
@@ -6309,7 +6350,6 @@ snapshots:
     dependencies:
       node-addon-api: 4.3.0
       prebuild-install: 7.1.2
-    optional: true
 
   keyv@4.5.4:
     dependencies:
@@ -6323,6 +6363,10 @@ snapshots:
       type-check: 0.4.0
 
   lines-and-columns@1.2.4: {}
+
+  linkify-it@2.2.0:
+    dependencies:
+      uc.micro: 1.0.6
 
   linkify-it@5.0.0:
     dependencies:
@@ -6393,6 +6437,14 @@ snapshots:
 
   make-error@1.3.6: {}
 
+  markdown-it@10.0.0:
+    dependencies:
+      argparse: 1.0.10
+      entities: 2.0.3
+      linkify-it: 2.2.0
+      mdurl: 1.0.1
+      uc.micro: 1.0.6
+
   markdown-it@14.1.0:
     dependencies:
       argparse: 2.0.1
@@ -6403,6 +6455,8 @@ snapshots:
       uc.micro: 2.1.0
 
   math-intrinsics@1.1.0: {}
+
+  mdurl@1.0.1: {}
 
   mdurl@2.0.0: {}
 
@@ -6429,8 +6483,7 @@ snapshots:
 
   mimic-fn@2.1.0: {}
 
-  mimic-response@3.1.0:
-    optional: true
+  mimic-response@3.1.0: {}
 
   minimatch@10.1.1:
     dependencies:
@@ -6448,8 +6501,7 @@ snapshots:
 
   minipass@7.1.2: {}
 
-  mkdirp-classic@0.5.3:
-    optional: true
+  mkdirp-classic@0.5.3: {}
 
   module-alias@2.2.3: {}
 
@@ -6459,8 +6511,7 @@ snapshots:
 
   nanoid@3.3.11: {}
 
-  napi-build-utils@1.0.2:
-    optional: true
+  napi-build-utils@1.0.2: {}
 
   natural-compare@1.4.0: {}
 
@@ -6469,10 +6520,8 @@ snapshots:
   node-abi@3.73.0:
     dependencies:
       semver: 7.6.3
-    optional: true
 
-  node-addon-api@4.3.0:
-    optional: true
+  node-addon-api@4.3.0: {}
 
   node-fetch@2.6.7:
     dependencies:
@@ -6578,6 +6627,11 @@ snapshots:
   os-homedir@1.0.2: {}
 
   os-tmpdir@1.0.2: {}
+
+  osenv@0.1.5:
+    dependencies:
+      os-homedir: 1.0.2
+      os-tmpdir: 1.0.2
 
   ovsx@0.10.7:
     dependencies:
@@ -6750,7 +6804,6 @@ snapshots:
       simple-get: 4.0.1
       tar-fs: 2.1.2
       tunnel-agent: 0.6.0
-    optional: true
 
   prelude-ls@1.2.1: {}
 
@@ -6764,7 +6817,6 @@ snapshots:
     dependencies:
       end-of-stream: 1.4.4
       once: 1.4.0
-    optional: true
 
   punycode.js@2.3.1: {}
 
@@ -6814,7 +6866,6 @@ snapshots:
       inherits: 2.0.4
       string_decoder: 1.3.0
       util-deprecate: 1.0.2
-    optional: true
 
   reduce-flatten@2.0.0: {}
 
@@ -7036,15 +7087,13 @@ snapshots:
       figures: 2.0.0
       pkg-conf: 2.1.0
 
-  simple-concat@1.0.1:
-    optional: true
+  simple-concat@1.0.1: {}
 
   simple-get@4.0.1:
     dependencies:
       decompress-response: 6.0.0
       once: 1.4.0
       simple-concat: 1.0.1
-    optional: true
 
   simple-invariant@2.0.1: {}
 
@@ -7130,7 +7179,6 @@ snapshots:
   string_decoder@1.3.0:
     dependencies:
       safe-buffer: 5.2.1
-    optional: true
 
   strip-ansi@6.0.1:
     dependencies:
@@ -7195,7 +7243,6 @@ snapshots:
       mkdirp-classic: 0.5.3
       pump: 3.0.2
       tar-stream: 2.2.0
-    optional: true
 
   tar-stream@2.2.0:
     dependencies:
@@ -7204,7 +7251,6 @@ snapshots:
       fs-constants: 1.0.0
       inherits: 2.0.4
       readable-stream: 3.6.2
-    optional: true
 
   terminal-link@2.1.1:
     dependencies:
@@ -7304,7 +7350,6 @@ snapshots:
   tunnel-agent@0.6.0:
     dependencies:
       safe-buffer: 5.2.1
-    optional: true
 
   tunnel@0.0.6: {}
 
@@ -7363,6 +7408,8 @@ snapshots:
 
   typical@5.2.0: {}
 
+  uc.micro@1.0.6: {}
+
   uc.micro@2.1.0: {}
 
   unbox-primitive@1.1.0:
@@ -7390,14 +7437,15 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
+  url-join@1.1.0: {}
+
   url-join@4.0.1: {}
 
   user-home@2.0.0:
     dependencies:
       os-homedir: 1.0.2
 
-  util-deprecate@1.0.2:
-    optional: true
+  util-deprecate@1.0.2: {}
 
   uuid@8.3.2: {}
 
@@ -7459,6 +7507,32 @@ snapshots:
       - terser
       - tsx
       - yaml
+
+  vsce@1.103.1:
+    dependencies:
+      azure-devops-node-api: 11.2.0
+      chalk: 2.4.2
+      cheerio: 1.0.0
+      commander: 6.2.1
+      denodeify: 1.2.1
+      glob: 7.2.3
+      hosted-git-info: 4.1.0
+      keytar: 7.9.0
+      leven: 3.1.0
+      lodash: 4.17.21
+      markdown-it: 10.0.0
+      mime: 1.6.0
+      minimatch: 3.1.2
+      osenv: 0.1.5
+      parse-semver: 1.1.1
+      read: 1.0.7
+      semver: 5.7.2
+      tmp: 0.2.3
+      typed-rest-client: 1.8.11
+      url-join: 1.1.0
+      xml2js: 0.4.23
+      yauzl: 2.10.0
+      yazl: 2.5.1
 
   webidl-conversions@3.0.1: {}
 
@@ -7568,6 +7642,11 @@ snapshots:
   wsl-utils@0.1.0:
     dependencies:
       is-wsl: 3.1.0
+
+  xml2js@0.4.23:
+    dependencies:
+      sax: 1.4.1
+      xmlbuilder: 11.0.1
 
   xml2js@0.5.0:
     dependencies:

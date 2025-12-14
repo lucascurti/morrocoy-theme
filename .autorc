@@ -3,7 +3,7 @@
     "all-contributors",
     "first-time-contributor",
     "released",
-    "git-tag",
+    "vscode",
     ["pr-body-labels"]
   ]
 }

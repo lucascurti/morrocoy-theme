@@ -48,18 +48,8 @@ jobs:
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: pnpm run release
-
-      - name: Publish to VS Code Marketplace
-        env:
           VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
-        run: |
-          if [ -n "$VSCE_PAT" ]; then
-            echo "Publishing to VS Code Marketplace..."
-            pnpm vsce publish --no-dependencies -p "$VSCE_PAT"
-          else
-            echo "VSCE_PAT not set, skipping VS Code Marketplace publish"
-          fi
+        run: pnpm run release
 
       - name: Publish to Open VSX Registry
         env:
