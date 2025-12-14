@@ -8,7 +8,6 @@
     "vscode": "^1.90.0",
     "node": ">=20.18.1 <24.0.0"
   },
-  "packageManager": "pnpm@9.14.4",
   "icon": "img/icon.png",
   "categories": [
     "Themes"
@@ -43,8 +42,8 @@
     "lint:fix": "eslint . --fix --cache --quiet",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "pnpm typecheck && pnpm lint && pnpm format:check",
-    "check:fix": "pnpm typecheck && pnpm lint:fix && pnpm format",
+    "check": "npm run typecheck && npm run lint && npm run format:check",
+    "check:fix": "npm run typecheck && npm run lint:fix && npm run format",
     "generate:colors": "tsx lib/MorrocoyTheme/resources/generateTailwindColors.ts",
     "generate:vscode-types": "tsx lib/MorrocoyTheme/resources/generateVSCodeColorTypes.ts",
     "generate:scope-types": "tsx lib/MorrocoyTheme/resources/generateTextMateScopeTypes.ts",
