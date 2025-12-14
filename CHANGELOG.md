@@ -1,3 +1,15 @@
+# v0.0.8 (Sun Dec 14 2025)
+
+#### ⚠️ Pushed to `main`
+
+- update auto ([@lucascurti](https://github.com/lucascurti))
+
+#### Authors: 1
+
+- Lucas Curti ([@lucascurti](https://github.com/lucascurti))
+
+---
+
 # v0.0.7 (Sun Dec 14 2025)
 
 #### ⚠️ Pushed to `main`
