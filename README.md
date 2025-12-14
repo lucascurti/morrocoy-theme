@@ -310,11 +310,11 @@ The workflow triggers automatically on every push to `main`.
 
 Set these secrets in your GitHub repository (**Settings → Secrets and variables → Actions**):
 
-| Secret     | Required    | Description                                                                                                    |
-| ---------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
-| `GH_TOKEN` | ✅ Yes      | GitHub Personal Access Token with `repo` scope. Used by `auto` to create releases, tags, and update changelog. |
-| `VSCE_PAT` | ✅ Yes      | VS Code Marketplace Personal Access Token. Used to publish to the marketplace.                                 |
-| `OVSX_PAT` | ❌ Optional | Open VSX Personal Access Token. If not set, Open VSX publishing is skipped.                                    |
+| Secret       | Required    | Description                                                                                                    |
+| ------------ | ----------- | -------------------------------------------------------------------------------------------------------------- |
+| `GH_TOKEN`   | ✅ Yes      | GitHub Personal Access Token with `repo` scope. Used by `auto` to create releases, tags, and update changelog. |
+| `VSCE_TOKEN` | ✅ Yes      | VS Code Marketplace Personal Access Token. Used to publish to the marketplace.                                 |
+| `OVSX_PAT`   | ❌ Optional | Open VSX Personal Access Token. If not set, Open VSX publishing is skipped.                                    |
 
 ### Setting Up Secrets
 
@@ -325,7 +325,7 @@ Set these secrets in your GitHub repository (**Settings → Secrets and variable
 3. Select scopes: `repo` (full control of private repositories)
 4. Copy the token and add it as `GH_TOKEN` in your repo secrets
 
-#### 2. VS Code Marketplace Token (`VSCE_PAT`)
+#### 2. VS Code Marketplace Token (`VSCE_TOKEN`)
 
 1. Go to [Azure DevOps](https://dev.azure.com/) and sign in with your Microsoft account
 2. Create an organization if you don't have one
@@ -334,7 +334,7 @@ Set these secrets in your GitHub repository (**Settings → Secrets and variable
    - Name: `vsce-publish` (or any name)
    - Organization: **All accessible organizations**
    - Scopes: **Custom defined** → **Marketplace** → check **Manage**
-5. Copy the token and add it as `VSCE_PAT` in your repo secrets
+5. Copy the token and add it as `VSCE_TOKEN` in your repo secrets
 
 > **Note:** Make sure the `publisher` field in `package.json` matches your VS Code Marketplace publisher ID.
 

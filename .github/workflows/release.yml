@@ -52,7 +52,7 @@ jobs:
 
       - name: Publish to VS Code Marketplace
         env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+          VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
         run: |
           if [ -n "$VSCE_PAT" ]; then
             echo "Publishing to VS Code Marketplace..."

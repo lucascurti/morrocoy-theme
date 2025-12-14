@@ -22,7 +22,10 @@
       }
     ]
   },
-  "repository": "lucascurti/morrocy-theme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucascurti/morrocoy-theme"
+  },
   "author": "Lucas Curti <lucas.curti@gmail.com>",
   "vsce": {
     "dependencies": false
