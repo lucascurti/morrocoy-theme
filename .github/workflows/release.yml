@@ -29,7 +29,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libsecret-1-dev dbus-x11 gnome-keyring
 
-      - name: Use Node.js 20.18.1
+      - name: Use Node.js 24.12.0
         uses: actions/setup-node@v6
         with:
           node-version: '24.12.0'
