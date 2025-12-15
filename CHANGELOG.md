@@ -1,3 +1,15 @@
+# v0.0.17 (Mon Dec 15 2025)
+
+#### ⚠️ Pushed to `main`
+
+- small fixes ([@lucascurti](https://github.com/lucascurti))
+
+#### Authors: 1
+
+- Lucas Curti ([@lucascurti](https://github.com/lucascurti))
+
+---
+
 # v0.0.16 (Mon Dec 15 2025)
 
 #### 🐛 Bug Fix
