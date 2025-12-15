@@ -18,6 +18,11 @@
         "label": "Morrocoy Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/morrocoy-dark.json"
+      },
+      {
+        "label": "Morrocoy Light",
+        "uiTheme": "vs",
+        "path": "./themes/morrocoy-light.json"
       }
     ]
   },
