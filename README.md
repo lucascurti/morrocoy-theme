@@ -31,6 +31,7 @@
 - [Table of Contents](#table-of-contents)
 - [Themes](#themes)
   - [Morrocoy Dark](#morrocoy-dark)
+  - [Morrocoy Light](#morrocoy-light)
 - [Installation](#installation)
 - [Building Themes with MorrocoyTheme](#building-themes-with-morrocoytheme)
   - [Why MorrocoyTheme?](#why-morrocoytheme)
@@ -64,6 +65,14 @@ A dark theme with a soothing blue-gray palette, perfect for long coding sessions
   <img src="img/morrocoy-dark.png" alt="Morrocoy Dark Theme Screenshot" width="800">
 </p>
 
+### Morrocoy Light
+
+A light theme with a clean, warm palette for bright environments.
+
+<p align="center">
+  <img src="img/morrocoy-light.png" alt="Morrocoy Light Theme Screenshot" width="800">
+</p>
+
 ---
 
 ## Installation
@@ -73,7 +82,7 @@ A dark theme with a soothing blue-gray palette, perfect for long coding sessions
 3. Search for `Morrocoy Theme`
 4. Click **Install**
 5. Open Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
-6. Type `Preferences: Color Theme` and select **Morrocoy Dark**
+6. Type `Preferences: Color Theme` and select **Morrocoy Dark** or **Morrocoy Light**
 
 ---
 
