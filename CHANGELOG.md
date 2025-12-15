@@ -1,3 +1,15 @@
+# v0.0.16 (Mon Dec 15 2025)
+
+#### 🐛 Bug Fix
+
+- Update actions/checkout action to v6 [#4](https://github.com/lucascurti/morrocoy-theme/pull/4) ([@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 1
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+
+---
+
 # v0.0.15 (Sun Dec 14 2025)
 
 #### 🐛 Bug Fix
