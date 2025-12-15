@@ -1,3 +1,15 @@
+# v0.1.0 (Mon Dec 15 2025)
+
+#### 🚀 Enhancement
+
+- add light theme [#8](https://github.com/lucascurti/morrocoy-theme/pull/8) ([@lucascurti](https://github.com/lucascurti))
+
+#### Authors: 1
+
+- Lucas Curti ([@lucascurti](https://github.com/lucascurti))
+
+---
+
 # v0.0.18 (Mon Dec 15 2025)
 
 #### ⚠️ Pushed to `main`
