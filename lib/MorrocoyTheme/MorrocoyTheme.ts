@@ -229,12 +229,12 @@ export class MorrocoyTheme {
       'activityBar.background': bgActivityBar,
       'activityBar.border': border,
       'activityBar.foreground': textSecondary,
-      'activityBar.inactiveForeground': textInactive,
+      'activityBar.inactiveForeground': textMuted,
       'activityBarBadge.background': accent,
       'activityBarBadge.foreground': bgEditor,
       'activityBarTop.background': bgActivityBar,
       'activityBarTop.foreground': textPrimary,
-      'activityBarTop.inactiveForeground': textInactive,
+      'activityBarTop.inactiveForeground': textMuted,
 
       // Toolbar
       'toolbar.hoverBackground': textPrimary + OPACITY[35],
@@ -411,6 +411,7 @@ export class MorrocoyTheme {
 
       // Editor Code Lens
       'editorCodeLens.foreground': textInactive,
+      'gitlens.currentLine.foregroundColor': textInactive,
 
       // Editor Cursor
       'editorCursor.background': bgEditor,
@@ -467,8 +468,8 @@ export class MorrocoyTheme {
       'editorLightBulbAutoFix.foreground': success,
 
       // Editor Line Number
-      'editorLineNumber.activeForeground': textSecondary + OPACITY[75],
-      'editorLineNumber.foreground': textSecondary + OPACITY[35],
+      'editorLineNumber.activeForeground': textMuted,
+      'editorLineNumber.foreground': textInactive,
 
       // Editor Link
       'editorLink.activeForeground': info,
@@ -658,7 +659,7 @@ export class MorrocoyTheme {
       'minimap.findMatchHighlight': textMuted + OPACITY[65],
       'minimap.infoHighlight': info + OPACITY[65],
       'minimap.selectionHighlight': textSecondary + OPACITY[15],
-      'minimap.selectionOccurrenceHighlight': textInactive + OPACITY[65],
+      'minimap.selectionOccurrenceHighlight': textMuted + OPACITY[65],
       'minimap.warningHighlight': warning + OPACITY[65],
       'minimapGutter.addedBackground': success,
       'minimapGutter.deletedBackground': error + OPACITY[65],
@@ -732,7 +733,7 @@ export class MorrocoyTheme {
       'profileBadge.foreground': textSecondary,
 
       // Progress Bar
-      'progressBar.background': textInactive,
+      'progressBar.background': textMuted,
 
       // Quick Input
       'quickInput.background': bgActivityBar,
@@ -795,11 +796,11 @@ export class MorrocoyTheme {
       'sideBar.dropBackground': bgSidebar + OPACITY[75],
       'sideBar.foreground': textSecondary,
       'sideBarSectionHeader.background': bgSidebar,
-      'sideBarSectionHeader.foreground': textInactive,
+      'sideBarSectionHeader.foreground': textMuted,
       'sideBarStickyScroll.background': bgSidebar,
       'sideBarStickyScroll.border': border,
       'sideBarStickyScroll.shadow': bgSidebar,
-      'sideBarTitle.foreground': textInactive,
+      'sideBarTitle.foreground': textMuted,
 
       // Status Bar
       'statusBar.background': bgActivityBar,

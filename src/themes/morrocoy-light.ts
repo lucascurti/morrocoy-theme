@@ -24,18 +24,18 @@ const config: MorrocoyThemeConfig = {
       // === Text Colors ===
       foreground: 'zinc.900',
       textSecondary: 'zinc.700',
-      textMuted: 'zinc.500',
-      textInactive: 'zinc.400',
+      textMuted: 'zinc.400',
+      textInactive: 'zinc.300',
 
       // === Backgrounds ===
       backgroundEditor: 'zinc.50',
-      backgroundSidebar: 'zinc.200',
-      backgroundActivityBar: 'zinc.300',
+      backgroundSidebar: 'zinc.100',
+      backgroundActivityBar: 'zinc.200',
       // Hover highlight
       backgroundHover: 'zinc.200',
 
       // === Semantic Colors ===
-      accent: 'sky.600',
+      accent: 'orange.600',
       error: 'red.400',
       warning: 'orange.400',
       success: 'green.600',
