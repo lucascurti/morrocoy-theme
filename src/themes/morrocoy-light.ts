@@ -35,7 +35,7 @@ const config: MorrocoyThemeConfig = {
       backgroundHover: 'zinc.200',
 
       // === Semantic Colors ===
-      accent: 'orange.600',
+      accent: 'sky.600',
       error: 'red.400',
       warning: 'orange.400',
       success: 'green.600',
@@ -59,7 +59,7 @@ const config: MorrocoyThemeConfig = {
       foreground: 'zinc.600',
 
       // === Comments ===
-      comment: 'gray.300',
+      comment: 'zinc.400',
 
       // === Literals ===
       string: 'lime.700',
