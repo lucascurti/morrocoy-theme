@@ -1,3 +1,15 @@
+# v0.2.0 (Sun Dec 21 2025)
+
+#### 🚀 Enhancement
+
+- Better-colors-and-contrasts [#12](https://github.com/lucascurti/morrocoy-theme/pull/12) ([@lucascurti](https://github.com/lucascurti))
+
+#### Authors: 1
+
+- Lucas Curti ([@lucascurti](https://github.com/lucascurti))
+
+---
+
 # v0.1.0 (Mon Dec 15 2025)
 
 #### 🚀 Enhancement
