@@ -411,7 +411,6 @@ export class MorrocoyTheme {
 
       // Editor Code Lens
       'editorCodeLens.foreground': textInactive,
-      'gitlens.currentLine.foregroundColor': textInactive,
 
       // Editor Cursor
       'editorCursor.background': bgEditor,

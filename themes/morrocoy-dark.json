@@ -152,7 +152,6 @@
     "editorBracketMatch.background": "#052f4a",
     "editorBracketMatch.border": "#90a1b9",
     "editorCodeLens.foreground": "#90a1b9",
-    "gitlens.currentLine.foregroundColor": "#90a1b9",
     "editorCursor.background": "#052f4a",
     "editorCursor.foreground": "#cad5e2",
     "editorError.background": "#00000000",
