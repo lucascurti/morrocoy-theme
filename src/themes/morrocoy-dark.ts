@@ -24,8 +24,8 @@ const config: MorrocoyThemeConfig = {
       // === Text Colors ===
       foreground: 'slate.300',
       textSecondary: 'slate.200',
-      textMuted: 'slate.500',
-      textInactive: 'slate.400',
+      textMuted: 'slate.400',
+      textInactive: 'slate.600',
 
       // === Backgrounds ===
       backgroundEditor: 'sky.950',
