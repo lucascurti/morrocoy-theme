@@ -218,7 +218,7 @@ export class MorrocoyTheme {
     const transparent = '#00000000';
 
     const accentBackground = accent + OPACITY[35];
-    const accentBackgroundLight = accent + OPACITY[10];
+    const accentBackgroundLight = accent + OPACITY[15];
     const accentBackgroundLighter = accent + OPACITY[5];
     const diffEditorInsertedBg = success + OPACITY[10];
     const diffEditorRemovedBg = error + OPACITY[10];
@@ -538,7 +538,7 @@ export class MorrocoyTheme {
       // Editor Widget
 
       // Error Foreground
-      errorForeground: accent,
+      errorForeground: error,
 
       // Extension Badge
       'extensionBadge.remoteBackground': success,
@@ -702,7 +702,7 @@ export class MorrocoyTheme {
 
       // Panel
       'panel.background': bgActivityBar,
-      'panel.border': bgActivityBar,
+      'panel.border': border,
       'panel.dropBackground': bgSidebar + OPACITY[75],
       'panelStickyScroll.background': bgActivityBar,
       'panelStickyScroll.border': border,
@@ -802,7 +802,7 @@ export class MorrocoyTheme {
 
       // Sidebar
       'sideBar.background': bgSidebar,
-      'sideBar.border': bgActivityBar,
+      'sideBar.border': border,
       'sideBar.dropBackground': bgSidebar + OPACITY[75],
       'sideBar.foreground': textSecondary,
       'sideBarSectionHeader.background': bgSidebar,
@@ -903,13 +903,13 @@ export class MorrocoyTheme {
       'terminal.ansiBrightCyan': info,
       'terminal.ansiBrightGreen': success,
       'terminal.ansiBrightMagenta': accent,
-      'terminal.ansiBrightRed': accent,
+      'terminal.ansiBrightRed': error,
       'terminal.ansiBrightWhite': textPrimary,
       'terminal.ansiBrightYellow': modified,
       'terminal.ansiCyan': info,
       'terminal.ansiGreen': success,
       'terminal.ansiMagenta': accent,
-      'terminal.ansiRed': accent,
+      'terminal.ansiRed': error,
       'terminal.ansiWhite': textPrimary,
       'terminal.ansiYellow': modified,
       'terminal.background': bgEditor,
@@ -922,16 +922,16 @@ export class MorrocoyTheme {
       'terminalCursor.foreground': cursor,
 
       // Testing
-      'testing.iconErrored': accent,
-      'testing.iconFailed': accent,
+      'testing.iconErrored': error,
+      'testing.iconFailed': error,
       'testing.iconPassed': success,
       'testing.iconQueued': textPrimary,
       'testing.iconSkipped': warning,
       'testing.iconUnset': textMuted,
-      'testing.message.error.decorationForeground': accent,
-      'testing.message.error.lineBackground': accent + OPACITY[10],
-      'testing.message.info.decorationForeground': textPrimary,
-      'testing.message.info.lineBackground': textPrimary + OPACITY[10],
+      'testing.message.error.decorationForeground': error,
+      'testing.message.error.lineBackground': error + OPACITY[10],
+      'testing.message.info.decorationForeground': info,
+      'testing.message.info.lineBackground': info + OPACITY[10],
       'testing.runAction': modified,
 
       // Text Block Quote
@@ -946,7 +946,7 @@ export class MorrocoyTheme {
       // Title Bar
       'titleBar.activeBackground': bgActivityBar,
       'titleBar.activeForeground': textSecondary,
-      'titleBar.border': bgActivityBar,
+      'titleBar.border': border,
       'titleBar.inactiveBackground': bgSidebar,
       'titleBar.inactiveForeground': border,
 
