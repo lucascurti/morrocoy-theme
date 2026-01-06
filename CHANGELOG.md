@@ -1,3 +1,15 @@
+# v0.2.1 (Tue Jan 06 2026)
+
+#### 🐛 Bug Fix
+
+- fixes for dark theme [#15](https://github.com/lucascurti/morrocoy-theme/pull/15) ([@lucascurti](https://github.com/lucascurti))
+
+#### Authors: 1
+
+- Lucas Curti ([@lucascurti](https://github.com/lucascurti))
+
+---
+
 # v0.2.0 (Sun Dec 21 2025)
 
 #### 🚀 Enhancement
