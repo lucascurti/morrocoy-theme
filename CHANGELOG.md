@@ -1,3 +1,15 @@
+# v0.2.2 (Sat Jan 17 2026)
+
+#### 🐛 Bug Fix
+
+- add opencode theme [#19](https://github.com/lucascurti/morrocoy-theme/pull/19) ([@lucascurti](https://github.com/lucascurti))
+
+#### Authors: 1
+
+- Lucas Curti ([@lucascurti](https://github.com/lucascurti))
+
+---
+
 # v0.2.1 (Tue Jan 06 2026)
 
 #### 🐛 Bug Fix
