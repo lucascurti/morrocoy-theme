@@ -33,6 +33,7 @@ const config: MorrocoyThemeConfig = {
       backgroundActivityBar: 'slate.700',
       // Hover highlight
       backgroundHover: 'slate.600',
+      border: 'slate.800',
 
       // === Semantic Colors ===
       accent: 'sky.300',

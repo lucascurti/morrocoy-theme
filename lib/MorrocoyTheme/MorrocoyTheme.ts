@@ -127,7 +127,16 @@ export class MorrocoyTheme {
   private config: MorrocoyThemeConfig;
 
   constructor(config: MorrocoyThemeConfig) {
-    this.config = config;
+    this.config = {
+      ...config,
+      theme: {
+        ...config.theme,
+        interface: {
+          ...config.theme.interface,
+          border: config.theme.interface.border ?? config.theme.interface.textInactive,
+        },
+      },
+    };
     this.validateConfig();
   }
 
@@ -197,8 +206,9 @@ export class MorrocoyTheme {
     const bgEditor = this.resolveColor(theme.backgroundEditor);
     const bgSidebar = this.resolveColor(theme.backgroundSidebar);
     const bgActivityBar = this.resolveColor(theme.backgroundActivityBar);
+    const bgSecondary = this.resolveColor(theme.textInactive);
 
-    const border = this.resolveColor(theme.textInactive);
+    const border = this.resolveColor(theme.border);
 
     const accent = this.resolveColor(theme.accent);
     const error = this.resolveColor(theme.error);
@@ -225,12 +235,9 @@ export class MorrocoyTheme {
     const selectionBackground = textInactive + OPACITY[65];
 
     const successLight = success + OPACITY[35];
-    const successLighter = success + OPACITY[15];
     const errorLight = error + OPACITY[35];
     const errorLighter = error + OPACITY[15];
-    const warningLight = warning + OPACITY[35];
     const warningLighter = warning + OPACITY[15];
-    const infoLight = info + OPACITY[35];
     const infoLighter = info + OPACITY[15];
 
     return {
@@ -254,7 +261,7 @@ export class MorrocoyTheme {
       'badge.foreground': bgEditor,
 
       // Banner
-      'banner.background': border,
+      'banner.background': bgSecondary,
       'banner.foreground': textSecondary,
       'banner.iconForeground': textSecondary,
 
@@ -270,7 +277,7 @@ export class MorrocoyTheme {
       'button.hoverBackground': bgActivityBar + OPACITY[50],
       'button.secondaryBackground': bgActivityBar,
       'button.secondaryForeground': textSecondary,
-      'button.secondaryHoverBackground': border,
+      'button.secondaryHoverBackground': bgSecondary,
       'button.separator': bgEditor,
 
       // Charts
@@ -288,7 +295,7 @@ export class MorrocoyTheme {
       'chat.avatarForeground': accent,
       'chat.requestBubbleBackground': textPrimary + OPACITY[15],
       'chat.requestBubbleHoverBackground': textPrimary + OPACITY[35],
-      'chat.requestBackground': border,
+      'chat.requestBackground': bgSecondary,
       'chat.requestBorder': border,
       'chat.slashCommandBackground': transparent,
       'chat.slashCommandForeground': accent,
@@ -343,7 +350,7 @@ export class MorrocoyTheme {
       'debugTokenExpression.value': textPrimary,
 
       // Debug Toolbar
-      'debugToolBar.background': border,
+      'debugToolBar.background': bgSecondary,
 
       // Debug View
       'debugView.exceptionLabelBackground': accent,
@@ -356,7 +363,7 @@ export class MorrocoyTheme {
       descriptionForeground: textSecondary,
 
       // Diff Editor
-      'diffEditor.diagonalFill': border,
+      'diffEditor.diagonalFill': bgSecondary,
       'diffEditor.insertedLineBackground': diffEditorInsertedBg,
       'diffEditor.insertedTextBackground': diffEditorInsertedBg,
       'diffEditor.removedLineBackground': diffEditorRemovedBg,
@@ -392,11 +399,12 @@ export class MorrocoyTheme {
       'editor.foreground': textPrimary,
       'editor.hoverHighlightBackground': textPrimary + OPACITY[5],
       'editor.inactiveSelectionBackground': textPrimary + OPACITY[5],
-      'editor.inlineValuesBackground': border,
+      'editor.inlineValuesBackground': bgSecondary,
       'editor.inlineValuesForeground': textSecondary,
       'editor.lineHighlightBackground': textInactive + OPACITY[35],
       'editor.lineHighlightBorder': transparent,
-      'editor.linkedEditingBackground': border,
+      'editor.linkedEditingBackground': bgSecondary,
+      'editor.placeholder.foreground': textMuted,
       'editor.rangeHighlightBackground': textPrimary + OPACITY[15],
       'editor.rangeHighlightBorder': border,
       'editor.selectionBackground': selectionBackground,
@@ -466,7 +474,7 @@ export class MorrocoyTheme {
       'editorHoverWidget.border': bgActivityBar,
 
       // Editor Indent Guide
-      'editorIndentGuide.background': border,
+      'editorIndentGuide.background': textInactive,
 
       // Editor Inlay Hint
       'editorInlayHint.background': bgActivityBar,
@@ -485,7 +493,7 @@ export class MorrocoyTheme {
       'editorLink.activeForeground': info,
 
       // Editor Marker Navigation
-      'editorMarkerNavigation.background': border,
+      'editorMarkerNavigation.background': bgSecondary,
       'editorMarkerNavigationError.background': error,
       'editorMarkerNavigationInfo.background': info,
       'editorMarkerNavigationWarning.background': warning,
@@ -493,11 +501,11 @@ export class MorrocoyTheme {
       // Editor Overview Ruler
       'editorOverviewRuler.addedForeground': success + OPACITY[65],
       'editorOverviewRuler.border': bgEditor,
-      'editorOverviewRuler.currentContentForeground': border,
+      'editorOverviewRuler.currentContentForeground': textSecondary,
       'editorOverviewRuler.deletedForeground': error + OPACITY[65],
       'editorOverviewRuler.errorForeground': error,
       'editorOverviewRuler.findMatchForeground': textPrimary + OPACITY[15],
-      'editorOverviewRuler.incomingContentForeground': border,
+      'editorOverviewRuler.incomingContentForeground': bgSecondary,
       'editorOverviewRuler.infoForeground': info,
       'editorOverviewRuler.modifiedForeground': modified + OPACITY[65],
       'editorOverviewRuler.rangeHighlightForeground': textPrimary + OPACITY[15],
@@ -510,7 +518,7 @@ export class MorrocoyTheme {
       'editorPane.background': bgEditor,
 
       // Editor Ruler
-      'editorRuler.foreground': border,
+      'editorRuler.foreground': textInactive,
 
       // Editor Sticky Scroll
       'editorStickyScroll.background': bgEditor,
@@ -533,7 +541,7 @@ export class MorrocoyTheme {
       'editorUnnecessaryCode.opacity': '#000000' + OPACITY[65],
 
       // Editor Whitespace
-      'editorWhitespace.foreground': border,
+      'editorWhitespace.foreground': bgSecondary,
 
       // Editor Widget
 
@@ -547,10 +555,10 @@ export class MorrocoyTheme {
       // Extension Button
       'extensionButton.background': bgActivityBar,
       'extensionButton.foreground': textSecondary,
-      'extensionButton.hoverBackground': border,
+      'extensionButton.hoverBackground': bgSecondary,
       'extensionButton.prominentBackground': bgActivityBar,
       'extensionButton.prominentForeground': textPrimary,
-      'extensionButton.prominentHoverBackground': border,
+      'extensionButton.prominentHoverBackground': textInactive,
 
       // Extension Icon
       'extensionIcon.preReleaseForeground': accent,
@@ -588,20 +596,20 @@ export class MorrocoyTheme {
       'input.background': bgActivityBar,
       'input.border': border,
       'input.foreground': textPrimary,
-      'input.placeholderForeground': textSecondary,
-      'inputOption.activeBackground': border,
+      'input.placeholderForeground': textMuted,
+      'inputOption.activeBackground': bgSecondary,
       'inputOption.activeBorder': border,
       'inputOption.activeForeground': textPrimary,
-      'inputOption.hoverBackground': border,
+      'inputOption.hoverBackground': bgSecondary,
 
       // Input Validation
-      'inputValidation.errorBackground': border,
+      'inputValidation.errorBackground': bgSecondary,
       'inputValidation.errorBorder': accent,
       'inputValidation.errorForeground': accent,
-      'inputValidation.infoBackground': border,
+      'inputValidation.infoBackground': bgSecondary,
       'inputValidation.infoBorder': info,
       'inputValidation.infoForeground': info,
-      'inputValidation.warningBackground': border,
+      'inputValidation.warningBackground': bgSecondary,
       'inputValidation.warningBorder': warning,
       'inputValidation.warningForeground': warning,
 
@@ -642,7 +650,7 @@ export class MorrocoyTheme {
       'menu.border': bgSidebar,
       'menu.foreground': textPrimary,
       'menu.selectionForeground': accent,
-      'menu.separatorBackground': border,
+      'menu.separatorBackground': bgSecondary,
       'menubar.selectionForeground': textPrimary,
 
       // Merge
@@ -710,17 +718,18 @@ export class MorrocoyTheme {
       'panelTitle.activeBorder': accent,
       'panelTitle.activeForeground': accent,
       'panelTitle.inactiveForeground': textMuted,
+      'panelTitle.border': border,
 
       // Peek View
       'peekView.border': bgActivityBar,
       'peekViewEditor.background': bgActivityBar,
-      'peekViewEditor.matchHighlightBackground': border,
+      'peekViewEditor.matchHighlightBackground': bgSecondary,
       'peekViewEditorGutter.background': bgActivityBar,
       'peekViewResult.background': bgActivityBar,
       'peekViewResult.fileForeground': textMuted,
       'peekViewResult.lineForeground': textMuted,
-      'peekViewResult.matchHighlightBackground': border,
-      'peekViewResult.selectionBackground': border,
+      'peekViewResult.matchHighlightBackground': bgSecondary,
+      'peekViewResult.selectionBackground': bgSecondary,
       'peekViewResult.selectionForeground': textPrimary,
       'peekViewTitle.background': bgSidebar,
       'peekViewTitleDescription.foreground': textMuted,
@@ -728,7 +737,7 @@ export class MorrocoyTheme {
 
       // Picker Group
       'pickerGroup.border': bgEditor,
-      'pickerGroup.foreground': border,
+      'pickerGroup.foreground': bgSecondary,
 
       // Ports
       'ports.iconRunningProcessForeground': success,
@@ -739,7 +748,7 @@ export class MorrocoyTheme {
       'problemsWarningIcon.foreground': warning,
 
       // Profile Badge
-      'profileBadge.background': border,
+      'profileBadge.background': bgSecondary,
       'profileBadge.foreground': textSecondary,
 
       // Progress Bar
@@ -829,8 +838,8 @@ export class MorrocoyTheme {
       'statusBarItem.focusBorder': textInactive,
       'statusBarItem.hoverBackground': accentBackgroundLight,
       'statusBarItem.hoverForeground': textPrimary,
-      'statusBarItem.prominentBackground': border,
-      'statusBarItem.prominentHoverBackground': border,
+      'statusBarItem.prominentBackground': bgSecondary,
+      'statusBarItem.prominentHoverBackground': bgSecondary,
       'statusBarItem.remoteBackground': bgActivityBar,
       'statusBarItem.remoteForeground': success,
       'statusBarItem.remoteHoverBackground': success,
@@ -896,7 +905,7 @@ export class MorrocoyTheme {
       'tab.unfocusedInactiveModifiedBorder': border,
 
       // Terminal
-      'terminal.ansiBlack': border,
+      'terminal.ansiBlack': bgSecondary,
       'terminal.ansiBlue': warning,
       'terminal.ansiBrightBlack': textInactive,
       'terminal.ansiBrightBlue': warning,
@@ -915,6 +924,7 @@ export class MorrocoyTheme {
       'terminal.background': bgEditor,
       'terminal.foreground': textPrimary,
       'terminal.selectionBackground': selectionBackground,
+      'terminal.border': border,
       'terminalCommandDecoration.defaultBackground': textPrimary,
       'terminalCommandDecoration.errorBackground': accent,
       'terminalCommandDecoration.successBackground': success,
@@ -933,7 +943,6 @@ export class MorrocoyTheme {
       'testing.message.info.decorationForeground': info,
       'testing.message.info.lineBackground': info + OPACITY[10],
       'testing.runAction': modified,
-
       // Text Block Quote
       'textBlockQuote.background': bgActivityBar,
       'textBlockQuote.border': bgActivityBar,
@@ -945,25 +954,25 @@ export class MorrocoyTheme {
 
       // Title Bar
       'titleBar.activeBackground': bgActivityBar,
-      'titleBar.activeForeground': textSecondary,
+      'titleBar.activeForeground': textMuted,
       'titleBar.border': border,
       'titleBar.inactiveBackground': bgSidebar,
-      'titleBar.inactiveForeground': border,
+      'titleBar.inactiveForeground': textMuted,
 
       // Tree
       'tree.inactiveIndentGuidesStroke': bgEditor,
-      'tree.indentGuidesStroke': border,
+      'tree.indentGuidesStroke': textMuted,
 
       // Walk Through
       'walkThrough.embeddedEditorBackground': bgSidebar,
 
       // Welcome Page
       'welcomePage.buttonBackground': bgActivityBar,
-      'welcomePage.buttonHoverBackground': border,
+      'welcomePage.buttonHoverBackground': bgSecondary,
       'welcomePage.progress.background': textInactive,
       'welcomePage.progress.foreground': textMuted,
       'welcomePage.tileBackground': bgActivityBar,
-      'welcomePage.tileHoverBackground': border,
+      'welcomePage.tileHoverBackground': bgSecondary,
       'welcomePage.tileShadow': bgActivityBar,
 
       // Widget

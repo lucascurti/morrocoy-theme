@@ -28,6 +28,8 @@ export interface SemanticInterfaceTheme {
   /** Inactive/unfocused text (inactive tabs, unfocused elements) */
   textInactive: TailwindColor;
 
+  border: TailwindColor;
+
   // === Background Colors ===
 
   /** Main editor background */
