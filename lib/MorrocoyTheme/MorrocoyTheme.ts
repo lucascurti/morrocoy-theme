@@ -1708,6 +1708,13 @@ export class MorrocoyTheme {
   get uiTheme(): 'vs' | 'vs-dark' {
     return this.config.type === 'light' ? 'vs' : 'vs-dark';
   }
+
+  /**
+   * Gets the semantic theme configuration (interface + code colors).
+   */
+  get semanticTheme(): SemanticTheme {
+    return this.config.theme;
+  }
 }
 
 // ==========================================================================
