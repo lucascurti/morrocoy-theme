@@ -18,6 +18,7 @@ function createMinimalInterfaceTheme(): SemanticInterfaceTheme {
     textSecondary: 'stone.500',
     textMuted: 'stone.400',
     textInactive: 'stone.400',
+    border: 'stone.400',
     backgroundEditor: 'stone.50',
     backgroundSidebar: 'stone.100',
     backgroundActivityBar: 'stone.200',
@@ -225,12 +226,12 @@ describe('MorrocoyTheme', () => {
       // Selection should have transparency
       const selectionBg = json.colors['editor.selectionBackground'];
       expect(selectionBg).toMatch(/^#[0-9a-f]{6}[0-9a-f]{2}$/i);
-      expect(selectionBg!.endsWith(OPACITY[15])).toBe(true);
+      expect(selectionBg!.endsWith(OPACITY[65])).toBe(true);
 
       // Line highlight should have subtle transparency
       const lineHighlight = json.colors['editor.lineHighlightBackground'];
       expect(lineHighlight).toMatch(/^#[0-9a-f]{6}[0-9a-f]{2}$/i);
-      expect(lineHighlight!.endsWith(OPACITY[5])).toBe(true);
+      expect(lineHighlight!.endsWith(OPACITY[35])).toBe(true);
     });
 
     it('should use semantic interface colors correctly', () => {
@@ -245,7 +246,9 @@ describe('MorrocoyTheme', () => {
       expect(json.colors['editorWarning.foreground']).toBe(tailwindColors['orange.600']);
 
       // Success color
-      expect(json.colors['gitDecoration.addedResourceForeground']).toBe(tailwindColors['teal.700']);
+      expect(json.colors['gitDecoration.addedResourceForeground']).toBe(
+        tailwindColors['teal.700'] + OPACITY[65]
+      );
 
       // Info color
       expect(json.colors['editorInfo.foreground']).toBe(tailwindColors['blue.700']);

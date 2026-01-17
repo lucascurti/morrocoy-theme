@@ -11,11 +11,13 @@ import { mkdir, readdir, readFile, rm, writeFile } from 'fs/promises';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
-import { MorrocoyTheme } from '../lib/MorrocoyTheme';
+import { MorrocoyTheme, MorrocoyThemeConfig } from '../lib/MorrocoyTheme';
+import { OpenCodeThemeBuilder } from '../lib/MorrocoyTheme/opencode';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const themesDir = join(__dirname, '../src/themes');
 const outputDir = join(__dirname, '../themes');
+const openCodeOutputDir = join(__dirname, '../opencode');
 const packageJsonPath = join(__dirname, '../package.json');
 
 interface PackageJson {
@@ -75,6 +77,42 @@ async function discoverThemes(): Promise<MorrocoyTheme[]> {
   }
 
   return themes;
+}
+
+interface ThemeModule {
+  default?: { theme: MorrocoyThemeConfig['theme'] };
+  [key: string]: unknown;
+}
+
+async function buildOpenCodeTheme(): Promise<void> {
+  console.log('Building OpenCode theme...');
+
+  const darkModule = (await import('../src/themes/morrocoy-dark')) as ThemeModule;
+  const lightModule = (await import('../src/themes/morrocoy-light')) as ThemeModule;
+
+  const darkConfig = Object.values(darkModule).find((v) => v instanceof MorrocoyTheme) as
+    | MorrocoyTheme
+    | undefined;
+  const lightConfig = Object.values(lightModule).find((v) => v instanceof MorrocoyTheme) as
+    | MorrocoyTheme
+    | undefined;
+
+  if (!darkConfig || !lightConfig) {
+    console.log('  Could not find dark and light theme configs, skipping OpenCode theme');
+    return;
+  }
+
+  const builder = new OpenCodeThemeBuilder({
+    dark: darkConfig.semanticTheme,
+    light: lightConfig.semanticTheme,
+  });
+
+  await mkdir(openCodeOutputDir, { recursive: true });
+
+  const outputPath = join(openCodeOutputDir, 'morrocoy.json');
+  await writeFile(outputPath, builder.toString(), 'utf-8');
+
+  console.log(`  Generated opencode/morrocoy.json`);
 }
 
 async function updatePackageJson(themes: MorrocoyTheme[]): Promise<void> {
@@ -144,7 +182,11 @@ async function main() {
   await updatePackageJson(themes);
   console.log('');
 
-  console.log(`Built ${themes.length} theme(s) successfully.`);
+  // Step 6: Build OpenCode theme
+  await buildOpenCodeTheme();
+  console.log('');
+
+  console.log(`Built ${themes.length} VS Code theme(s) + OpenCode theme successfully.`);
 }
 
 main().catch(console.error);
