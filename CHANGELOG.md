@@ -1,3 +1,15 @@
+# v0.2.4 (Thu Jan 22 2026)
+
+#### ⚠️ Pushed to `main`
+
+- build ([@lucascurti](https://github.com/lucascurti))
+
+#### Authors: 1
+
+- Lucas Curti ([@lucascurti](https://github.com/lucascurti))
+
+---
+
 # v0.2.3 (Thu Jan 22 2026)
 
 #### 🐛 Bug Fix
