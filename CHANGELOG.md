@@ -1,3 +1,15 @@
+# v0.2.3 (Thu Jan 22 2026)
+
+#### 🐛 Bug Fix
+
+- terminal colors [#20](https://github.com/lucascurti/morrocoy-theme/pull/20) ([@lucascurti](https://github.com/lucascurti))
+
+#### Authors: 1
+
+- Lucas Curti ([@lucascurti](https://github.com/lucascurti))
+
+---
+
 # v0.2.2 (Sat Jan 17 2026)
 
 #### 🐛 Bug Fix
