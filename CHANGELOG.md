@@ -1,3 +1,16 @@
+# v0.2.5 (Thu May 07 2026)
+
+#### ⚠️ Pushed to `main`
+
+- fix tab error color ([@lucascurti](https://github.com/lucascurti))
+- update node ([@lucascurti](https://github.com/lucascurti))
+
+#### Authors: 1
+
+- Lucas Curti ([@lucascurti](https://github.com/lucascurti))
+
+---
+
 # v0.2.4 (Thu Jan 22 2026)
 
 #### ⚠️ Pushed to `main`
