@@ -627,7 +627,7 @@ export class MorrocoyTheme {
       'list.activeSelectionBackground': textPrimary + OPACITY[5],
       'list.activeSelectionForeground': accent,
       'list.dropBackground': bgActivityBar + OPACITY[75],
-      'list.errorForeground': accent,
+      'list.errorForeground': error,
       'list.focusBackground': bgEditor,
       'list.focusForeground': textPrimary,
       'list.highlightForeground': textPrimary,
@@ -743,7 +743,7 @@ export class MorrocoyTheme {
       'ports.iconRunningProcessForeground': success,
 
       // Problems
-      'problemsErrorIcon.foreground': accent,
+      'problemsErrorIcon.foreground': error,
       'problemsInfoIcon.foreground': info,
       'problemsWarningIcon.foreground': warning,
 
