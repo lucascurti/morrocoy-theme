@@ -6,7 +6,7 @@
   "version": "0.2.4",
   "engines": {
     "vscode": "^1.90.0",
-    "node": ">=20.18.1 <25.0.0"
+    "node": ">=20.18.1 <27.0.0"
   },
   "icon": "img/icon.png",
   "categories": [
@@ -60,12 +60,12 @@
   "devDependencies": {
     "@auto-it/all-contributors": "11.3.6",
     "@auto-it/first-time-contributor": "11.3.6",
-    "@auto-it/vscode": "11.3.6",
     "@auto-it/pr-body-labels": "11.3.6",
     "@auto-it/released": "11.3.6",
+    "@auto-it/vscode": "11.3.6",
     "@eslint/eslintrc": "3.3.3",
     "@types/culori": "^4.0.1",
-    "@types/node": "^25.0.2",
+    "@types/node": "^25.6.0",
     "@typescript-eslint/eslint-plugin": "8.49.0",
     "@typescript-eslint/parser": "8.49.0",
     "@vscode/vsce": "^3.2.1",
